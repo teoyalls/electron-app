@@ -3,8 +3,18 @@
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
+  "build": {
+    "appId": "com.baidu.app",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +27,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^3.0.7"
+    "electron": "^3.0.7",
+    "electron-builder": "^20.38.2"
   }
 }
